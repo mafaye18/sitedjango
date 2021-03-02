@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django .http import HttpResponse
-from agent_voyage.models import Destination
-from agent_voyage.models import Voyage
-from agent_voyage.models import Excursion
+from django.apps import apps
 
+Destination = apps.get_model('agent_voyage', 'Destination')
+Voyage = apps.get_model('agent_voyage', 'Voyage')
+Excursion = apps.get_model('agent_voyage', 'Excursion')
 
 posts = [
     {
